@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Bayestech Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-bolt"></i> BAYESTECH SOLUTIONS
+            </a>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with our electrical and automation experts</p>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2><i class="fas fa-map-marker-alt"></i> Our Office</h2>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Business Address</h3>
+                                <p>GK CAMPUS<br>MINNA,NIGER STATE<br>NIGERIA</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Phone Numbers</h3>
+                                <p>Office: +1 (234) 9169025365<br>Emergency: +1 (234) 9169025365<br>Fax: +1 (234) 9169025365</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email Addresses</h3>
+                                <p>General: bayestech@gmail.com<br>Support: oabdulsamad72@gmail.com<br>Sales: bayestech@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h3>WhatsApp Business</h3>
+                                <p>+1 (234) 9169025365<br>Available 24/7 for quick queries</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="business-hours">
+                        <h3><i class="fas fa-clock"></i> Business Hours</h3>
+                        <div class="hours-grid">
+                            <div class="day">
+                                <span>Monday - Friday</span>
+                                <span>8:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="day">
+                                <span>Saturday</span>
+                                <span>9:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="day">
+                                <span>Sunday</span>
+                                <span>Emergency Only</span>
+                            </div>
+                            <div class="day">
+                                <span>24/7 Emergency</span>
+                                <span>Available</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-areas">
+                        <h3><i class="fas fa-map-marked-alt"></i> Service Areas</h3>
+                        <p>We serve the following areas:</p>
+                        <div class="areas-grid">
+                            <span><i class="fas fa-check-circle"></i> minna,niger state</span>
+                            <span><i class="fas fa-check-circle"></i> fct,abuja</span>
+                            <span><i class="fas fa-check-circle"></i> ilorin,kwara state</span>
+                            <span><i class="fas fa-check-circle"></i> lagos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2><i class="fas fa-comment-dots"></i> Send Message to WhatsApp</h2>
+                    <p class="form-description">Fill the form below and send directly to our WhatsApp for immediate response</p>
+                    
+                    <form id="whatsappForm">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Full Name *</label>
+                            <input type="text" id="name" required placeholder="Enter your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email Address *</label>
+                            <input type="email" id="email" required placeholder="Enter your email address">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone"><i class="fas fa-phone"></i> Phone Number *</label>
+                            <input type="tel" id="phone" required placeholder="Enter your phone number with country code">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service"><i class="fas fa-cogs"></i> Service Required *</label>
+                            <select id="service" required>
+                                <option value="">Select a service</option>
+                                <option value="Electrical Works">Electrical Works</option>
+                                <option value="Home Automation">Home Automation</option>
+                                <option value="Solar Installation">Solar Installation</option>
+                                <option value="CCTV & Security">CCTV & Security</option>
+                                <option value="Emergency Repair">Emergency Repair</option>
+                                <option value="Consultation">Consultation</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject"><i class="fas fa-heading"></i> Subject *</label>
+                            <input type="text" id="subject" required placeholder="Brief description of your inquiry">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-edit"></i> Message *</label>
+                            <textarea id="message" rows="5" required placeholder="Please describe your requirements in detail. Include address if site visit is needed."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="urgency"><i class="fas fa-exclamation-triangle"></i> Urgency Level</label>
+                            <select id="urgency">
+                                <option value="Normal">Normal - Within 1-2 business days</option>
+                                <option value="Urgent">Urgent - Within 24 hours</option>
+                                <option value="Emergency">Emergency - Immediate response needed</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                        </button>
+                        
+                        <p class="form-note">
+                            <i class="fas fa-info-circle"></i> By submitting, you agree to receive a WhatsApp message from Bayestech Solutions.
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Emergency Contact Banner -->
+            <div class="emergency-contact">
+                <div class="emergency-content">
+                    <div class="emergency-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="emergency-text">
+                        <h3>Electrical Emergency?</h3>
+                        <p>For power outages, electrical hazards, or urgent repairs, call our emergency line immediately</p>
+                    </div>
+                    <a href="tel:+1234567891" class="btn btn-emergency">
+                        <i class="fas fa-phone"></i> Emergency: +1 (234) 9169025365
+                    </a>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-section">
+                <h2><i class="fas fa-map"></i> Find Us</h2>
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>Our Location</h3>
+                        <p>CURRENTY IN GK CAMPUS,MINNA, NIGER STATE</p>
+                        <a href="https://maps.google.com" target="_blank" class="btn btn-secondary">
+                            <i class="fas fa-directions"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3><i class="fas fa-bolt"></i> Bayestech Solutions</h3>
+                    <p>Your trusted partner for all electrical, automation, solar, and security solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#electrical">Electrical Works</a></li>
+                        <li><a href="services.html#automation">Home Automation</a></li>
+                        <li><a href="services.html#solar">Solar Systems</a></li>
+                        <li><a href="services.html#security">CCTV & Security</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i>CURRENTY IN GK CAMPUS,MINNA,NIGER STATE.</li>
+                        <li><i class="fas fa-phone"></i> +1 (234) 9169025365</li>
+                        <li><i class="fas fa-envelope"></i> bayestech@gmail.com</li>
+                        <li><i class="fab fa-whatsapp"></i> +1 (234) 9169025365</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bayestech Solutions. All rights reserved. | Licensed & Insured Electrical Contractors</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

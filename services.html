@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Bayestech Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Additional styles for services page */
+        .page-header {
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .services-details {
+            padding: 5rem 0;
+        }
+
+        .service-category {
+            margin-bottom: 6rem;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #ffd700;
+        }
+
+        .category-icon {
+            font-size: 3rem;
+            color: #ffd700;
+            background: #1a365d;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .category-description {
+            color: #666;
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border-left: 4px solid #ffd700;
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .service-item h3 {
+            color: #1a365d;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .service-item i {
+            color: #ffd700;
+        }
+
+        .service-item p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .service-item ul {
+            list-style: none;
+            margin-top: 1.5rem;
+            padding-left: 0;
+        }
+
+        .service-item li {
+            padding: 0.7rem 0;
+            border-bottom: 1px solid #eee;
+            padding-left: 1.8rem;
+            position: relative;
+            color: #555;
+        }
+
+        .service-item li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ffd700;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .service-item li:last-child {
+            border-bottom: none;
+        }
+
+        .service-cta {
+            text-align: center;
+            padding: 4rem;
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            color: white;
+            border-radius: 15px;
+            margin-top: 4rem;
+        }
+
+        .service-cta h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+
+        .service-cta p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .category-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-cta {
+                padding: 3rem 1.5rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-buttons .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .service-item {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-bolt"></i> BAYESTECH SOLUTIONS
+            </a>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="services.html" class="active"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Professional Services</h1>
+            <p>Comprehensive Electrical & Automation Solutions</p>
+        </div>
+    </section>
+
+    <!-- Services Details -->
+    <section class="services-details">
+        <div class="container">
+            <!-- Electrical Services -->
+            <div class="service-category" id="electrical">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div>
+                        <h2>Electrical Services</h2>
+                        <p class="category-description">Complete electrical solutions for residential, commercial, and industrial clients</p>
+                    </div>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h3><i class="fas fa-home"></i> Residential Wiring</h3>
+                        <p>Complete home electrical wiring, panel upgrades, lighting installation, and electrical repairs for houses and apartments.</p>
+                        <ul>
+                            <li>New home electrical wiring</li>
+                            <li>Electrical panel upgrades and replacements</li>
+                            <li>LED lighting installation</li>
+                            <li>Outlet and switch installation</li>
+                            <li>Ceiling fan installation</li>
+                            <li>Troubleshooting and repairs</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h3><i class="fas fa-building"></i> Commercial Electrical</h3>
+                        <p>Electrical systems for offices, retail spaces, restaurants, and commercial buildings including three-phase installations.</p>
+                        <ul>
+                            <li>Commercial lighting systems</li>
+                            <li>Electrical system design and installation</li>
+                            <li>Generator installation and maintenance</li>
+                            <li>Energy management systems</li>
+                            <li>Data center power solutions</li>
+                            <li>Emergency power systems</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h3><i class="fas fa-industry"></i> Industrial Electrical</h3>
+                        <p>Heavy-duty electrical systems for factories, warehouses, manufacturing plants, and industrial facilities.</p>
+                        <ul>
+                            <li>Motor control systems installation</li>
+                            <li>PLC programming and installation</li>
+                            <li>Power distribution systems</li>
+                            <li>Preventive maintenance programs</li>
+                            <li>Equipment wiring and commissioning</li>
+                            <li>Industrial lighting solutions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Automation Services -->
+            <div class="service-category" id="automation">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div>
+                        <h2>Automation & Smart Solutions</h2>
+                        <p class="category-description">Intelligent systems for modern living and efficient operations</p>
+                    </div>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h3><i class="fas fa-house-user"></i> Home Automation</h3>
+                        <p>Complete smart home systems including lighting control, climate control, security integration, and entertainment systems.</p>
+                        <ul>
+                            <li>Smart lighting and dimming systems</li>
+                            <li>Automated climate and HVAC control</li>
+                            <li>Voice control integration (Alexa, Google Home)</li>
+                            <li>Smart appliance control and monitoring</li>
+                            <li>Home theater and audio systems</li>
+                            <li>Automated window treatments</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h3><i class="fas fa-building"></i> Building Automation</h3>
+                        <p>Integrated systems for commercial buildings including energy management, access control, and facility management.</p>
+                        <ul>
+                            <li>Building Management Systems (BMS)</li>
+                            <li>Energy monitoring and optimization</li>
+                            <li>HVAC automation and control</li>
+                            <li>Integrated security systems</li>
+                            <li>Smart parking solutions</li>
+                            <li>Visitor management systems</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h3><i class="fas fa-industry"></i> Industrial Automation</h3>
+                        <p>PLC programming, SCADA systems, and industrial control systems for manufacturing and processing facilities.</p>
+                        <ul>
+                            <li>PLC programming and installation</li>
+                            <li>SCADA system design and implementation</li>
+                            <li>Process automation and control</li>
+                            <li>Equipment monitoring and diagnostics</li>
+                            <li>Robotic system integration</li>
+                            <li>Quality control systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solar Services -->
+            <div class="service-category" id="solar">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <div>
+                        <h2>Solar Energy Systems</h2>
+                        <p class="category-description">Sustainable energy solutions for homes and businesses</p>
+                    </div>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h3><i class="fas fa-home"></i> Residential Solar</h3>
+                        <p>Complete solar panel installation for homes including battery backup systems and grid-tied solutions.</p>
+                        <ul>
+                            <li>Solar panel installation and mounting</li>
+                            <li>Battery backup systems</li>
+                            <li>Grid-tied solar systems</li>
+                            <li>Solar water heating systems</li>
+                            <li>Net metering setup</li>
+                            <li>Solar system monitoring</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h3><i class="fas fa-building"></i> Commercial Solar</h3>
+                        <p>Large-scale solar installations for businesses, factories, warehouses, and commercial properties.</p>
+                        <ul>
+                            <li>Commercial solar farm installation</li>
+                            <li>Roof-mounted solar systems</li>
+                            <li>Solar carport installation</li>
+                            <li>Energy monitoring and analytics</li>
+                            <li>Solar for agricultural use</li>
+                            <li>Industrial solar solutions</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h3><i class="fas fa-tools"></i> Maintenance & Repair</h3>
+                        <p>Regular maintenance, cleaning, and repair services for all types of solar installations.</p>
+                        <ul>
+                            <li>Solar system inspections</li>
+                            <li>Panel cleaning and maintenance</li>
+                            <li>Inverter repairs and replacement</li>
+                            <li>Performance monitoring and optimization</li>
+                            <li>Warranty claim assistance</li>
+                            <li>Emergency repair services</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Services -->
+            <div class="service-category" id="security">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div>
+                        <h2>Security & Surveillance</h2>
+                        <p class="category-description">Complete security solutions for protection and peace of mind</p>
+                    </div>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h3><i class="fas fa-video"></i> CCTV Installation</h3>
+                        <p>Professional CCTV camera installation for homes, businesses, and industrial facilities with remote monitoring.</p>
+                        <ul>
+                            <li>HD and 4K security cameras</li>
+                            <li>IP camera systems installation</li>
+                            <li>Remote monitoring setup</li>
+                            <li>Night vision and thermal cameras</li>
+                            <li>Video doorbell installation</li>
+                            <li>CCTV maintenance and upgrades</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h3><i class="fas fa-door-closed"></i> Smart Door Systems</h3>
+                        <p>Advanced access control and smart door systems for enhanced security and convenience.</p>
+                        <ul>
+                            <li>Smart lock installation</li>
+                            <li>Access control systems</li>
+                            <li>Biometric entry systems</li>
+                            <li>Remote access control</li>
+                            <li>Intercom systems</li>
+                            <li>Automatic gate systems</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-item">
+                        <h3><i class="fas fa-bell"></i> Alarm Systems</h3>
+                        <p>Complete security alarm systems with monitoring services for comprehensive protection.</p>
+                        <ul>
+                            <li>Burglar alarm installation</li>
+                            <li>Fire alarm and smoke detection systems</li>
+                            <li>Motion detectors and sensors</li>
+                            <li>24/7 monitoring services</li>
+                            <li>Glass break sensors</li>
+                            <li>Perimeter security systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="service-cta">
+                <h3>Ready to Power Your World?</h3>
+                <p>Contact us today for a free consultation and quote for your electrical, automation, solar, or security needs. Our experts are ready to help you find the perfect solution.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary" style="background-color: #ffd700; color: #1a365d;">
+                        <i class="fas fa-phone-alt"></i> Get Free Quote
+                    </a>
+                    <a href="tel:+2349169025365" class="btn btn-secondary" style="background-color: transparent; color: white; border: 2px solid white;">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3><i class="fas fa-bolt"></i> Bayestech Solutions</h3>
+                    <p>Your trusted partner for all electrical, automation, solar, and security solutions.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1K7JHHmskZ/"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/2349169025365"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=qz5y6en"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#electrical">Electrical Works</a></li>
+                        <li><a href="services.html#automation">Home Automation</a></li>
+                        <li><a href="services.html#solar">Solar Systems</a></li>
+                        <li><a href="services.html#security">CCTV & Security</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i>CURRENTY GK CAMPUS,MINNA,NIGER STATE.</li>
+                        <li><i class="fas fa-phone"></i> +1 (234) 916-902-5365</li>
+                        <li><i class="fas fa-envelope"></i> bayestech@gmail.com</li>
+                        <li><i class="fab fa-whatsapp"></i> +1 (234) 916-902-5365</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bayestech Solutions. All rights reserved. | Licensed & Insured Electrical Contractors</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                menuToggle.innerHTML = navMenu.classList.contains('active') 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (event) => {
+                if (!menuToggle.contains(event.target) && !navMenu.contains(event.target)) {
+                    navMenu.classList.remove('active');
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+
+            // Close menu when clicking a link
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Highlight active service in navigation
+        const currentPage = location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('.nav-menu a');
+
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('href');
+            if (currentPage === linkPage) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+
+        // Service cards animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe service items
+        document.querySelectorAll('.service-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(item);
+        });
+
+        // Service category highlighting
+        const serviceCategories = document.querySelectorAll('.service-category');
+        
+        const highlightCategory = () => {
+            serviceCategories.forEach(category => {
+                const rect = category.getBoundingClientRect();
+                if (rect.top <= 150 && rect.bottom >= 150) {
+                    category.style.opacity = '1';
+                    category.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        window.addEventListener('scroll', highlightCategory);
+        highlightCategory(); // Initial check
+    </script>
+</body>
+</html>
