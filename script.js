@@ -78,7 +78,7 @@ if (whatsappForm) {
 *⚡ Bayestech Solutions*`;
         
         // Your WhatsApp number (REPLACE WITH YOUR ACTUAL NUMBER)
-        const whatsappNumber = '2349169025365'; // Example: 1234567890 (without + sign)
+        const whatsappNumber = '2348114793451'; // Example: 1234567890 (without + sign)
         
         // Create WhatsApp URL
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${formattedMessage}`;
